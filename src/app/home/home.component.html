@@ -1,0 +1,35 @@
+<div class="main-container">
+    <div class="hide" id="translating-notification"><span>Translating</span></div>
+    <div class="header"></div>
+    <div class="content">
+        <div class="input-container">
+            <div class="language-container">
+                <mat-form-field>
+                    <select matNativeControl required (change)="SelectInputLanguage($event)">
+                        <option value="English">English</option>
+                        <option value="French">French</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Chinese">Chinese</option>
+                    </select>
+                </mat-form-field>
+            </div>
+            <button (click)="startListening($event)"><mat-icon aria-hidden="false" fontIcon="mic"></mat-icon></button>
+            <span id="action"></span>
+            <span id="input" class="hide"></span>
+        </div>
+        <div class="output-container">
+            <div class="language-container">
+                <mat-form-field>
+                    <select matNativeControl required (change)="SelectOutputLanguage($event)">
+                        <option value="French">French</option>
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Chinese">Chinese</option>
+                    </select>
+                </mat-form-field>
+            </div>
+            <span id="output"></span>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
